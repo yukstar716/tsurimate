@@ -5,6 +5,8 @@
 //= require jquery3
 //= require popper
 //= require bootstrap
+//= require bootstrap.bundle.min
+//= require jquery.min
 
 import Rails from "@rails/ujs"
 import Turbolinks from "turbolinks"
