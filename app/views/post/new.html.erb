@@ -1,0 +1,29 @@
+<div class="container"> 
+<div class="title">
+  <h1>質問💡</h1>
+</div>
+<%= form_with(model: @post, local: true) do |f| %>
+  <div class="form-title">
+    <%= f.label :title, "タイトル" %>
+    <%= f.text_field :title, class: "form-control" %>
+    <small id="title-tip" class="form-text text-muted">
+      タイトルを入力してください。
+    </small>
+  </div>
+
+  <div class="form-content">
+    <%= f.label :content, "投稿内容"%>
+    <%= f.text_area :content, size: "20x10", class: "form-control" %>
+    <small id="title-tip" class="form-text text-muted", rows:10 >
+      投稿内容を入力してください。
+    </small>
+  </div>
+
+  <div class="submit">
+    <%= f.submit "投稿", class: "btn btn-info btn-lg" %>
+    <small id="submit-tip" class=" form-text text-muted">
+      投稿する前に内容をご確認ください！
+    </small>
+  </div>
+<% end %>
+</div>
