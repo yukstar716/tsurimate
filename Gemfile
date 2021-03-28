@@ -38,7 +38,7 @@ group :development, :test do
   gem 'rspec-rails'
 
   # Devise
-  gem 'devise'
+  gem 'devise', git: 'https://github.com/heartcombo/devise'
   gem 'omniauth-twitter'
 
 end
