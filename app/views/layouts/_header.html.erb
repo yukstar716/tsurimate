@@ -11,11 +11,13 @@
         <ul class="navbar-nav ml-auto">
           <% if user_signed_in? %>
             <li class="nav-item">
-              <a class="nav-link" href="#">Log Out</a>
+              <a class="nav-link" href="/users/sign_out">Log Out</a>
             </li>
-            <li class="img-icon" href="#">
-              <%= image_tag "book.png", alt: "Test icon", 
-                        id: "assets", class: "image" %>
+            <li class="nav-item" href="#">
+              <%= link_to top_path do %>
+                <%= image_tag "book.png", size: 6*6, alt: "Test icon", 
+                        id: "assets", class: "image_icon" %>
+              <% end %>
             </li>
           <% else %>
             <li class="nav-item">
