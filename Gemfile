@@ -41,6 +41,8 @@ group :development, :test do
   gem 'devise', git: 'https://github.com/heartcombo/devise'
   gem 'omniauth-twitter'
 
+  gem 'annotate'
+
 end
 
 group :development do
