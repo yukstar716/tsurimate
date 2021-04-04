@@ -29,7 +29,11 @@
   padding-bottom: var(--jumbotron-padding-y);
   margin-bottom: 0;
   background-color: #fff;
+  background:url(4217535_s.jpg) center no-repeat;
+  background-size: cover;
+  
 }
+
 @media (min-width: 768px) {
   .jumbotron {
     padding-top: calc(var(--jumbotron-padding-y) * 2);

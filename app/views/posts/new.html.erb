@@ -5,7 +5,9 @@
 <%= form_with(model: @post, local: true) do |f| %>
   <div class="form-title">
     <%= f.label :title, "タイトル" %>
-    <%= f.text_field :title, class: "form-control" %>
+    <div class="input-wrap">
+      <%= f.text_field :title, class: "form-control" %>
+    </div>
     <small id="title-tip" class="form-text text-muted">
       タイトルを入力してください。
     </small>
