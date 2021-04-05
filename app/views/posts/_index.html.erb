@@ -2,13 +2,16 @@
   <div class="row">
     <% @posts.each do |post| %>
       <div class="col-md-4">
-        <div class="card mb-4 shadow-sm">
+        <div class="card mb-4">
           <%= link_to post do %>
             <%= image_tag "4268892_s.jpg", class: "card-image" %>
-              <div class="card-body">
-                <p class="card-text"><%= post.title %></p>
-                <div class="d-flex justify-content-end align-items-end">
-                  <small class="text-muted">9 mins</small>
+              <%= image_tag "book.png", size: 9*9, class: "card-icon" %>
+              <div class="card-wrapper">
+                <div class="card-body">
+                  <p class="card-text"><%= post.title %></p>
+                  <div class="d-flex justify-content-end align-items-end">
+                    <small class="text-muted">ユーザー名</small>
+                  </div>
                 </div>
               </div>
           <% end %>
