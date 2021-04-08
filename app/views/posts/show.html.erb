@@ -4,13 +4,65 @@
       <div class="col-sm-12">
         <div class="card">
           <div class="card-header">
-            <h1 class="header-title">this is title</h1>
-            <p class="header-content">this is content</p>
+            <h1 class="header-title">明日釣りに行きませんか？</h1>
+            <p class="header-content">昨日、横浜の某所へアジング探索に行ってきました。まだ、時期尚早だったのか、豆1匹という貧家でした... もしどなたか懲りずに言ってくれる方がいたらウェルカムです！</p>
+            <%= link_to top_path do %>
+              <%= image_tag "book.png", size: 6*6, class: "image_icon"%>
+              <p class="user-name">Allen iversionさんの投稿</p>
+            <% end %>
           </div>
-          <div class="card-body">
-            <h5 class="card-title">Special title treatment</h5>
-            <p class=" card-text">this is main content</p>
+          
+          <h4 class="comment-box">コメント一覧</h4>
+          
+          <hr class="border-first">
+          
+            <!--コメントのテンプレート-->
+            <div class="media">
+              <svg class="bd-placeholder-img mr-3" width="64" height="64" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 64x64"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"/><text x="50%" y="50%" fill="#dee2e6" dy=".3em">64x64</text></svg>
+              <div class="media-body">
+                <h5 class="mt-0">Yukstar</h5>
+                自分も昨日トライしてきました！もしかしたらご一緒だったかも！？自分も横浜ホームなので是非、ご一緒しましょうー^_^
+
+                <hr class="border">
+                
+                <div class="media mt-3">
+                  <a class="mr-3" href="#">
+                    <svg class="bd-placeholder-img" width="64" height="64" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 64x64"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"/><text x="50%" y="50%" fill="#dee2e6" dy=".3em">64x64</text></svg>
+                  </a>
+                  <div class="media-body">
+                    <h5 class="mt-0">Allen Iverson</h5>
+                    おー！！なんと！！お隣でライトグリーンのウィンドブレイカー着てた方でしょうか？？よろしくお願いします〜♪
+                  </div>
+                </div>
+
+                <hr class="border">
+              
+              </div>
             </div>
+            
+            <!--コメントの繰り返し-->
+            <div class="media">
+              <svg class="bd-placeholder-img mr-3" width="64" height="64" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 64x64"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"/><text x="50%" y="50%" fill="#dee2e6" dy=".3em">64x64</text></svg>
+              <div class="media-body">
+                <h5 class="mt-0">流離のアジンガー</h5>
+                拙者も昨日は鯵の顔を拝みに候。昨日の釣果は河豚一匹となんとも不甲斐ない釣果に終わったでござる。拙者、浜地区で大和のアジングロッドを片手に放浪する下級藩士でござる。見かけた際はご一緒させて候。
+
+                <hr class="border">
+
+                <div class="media mt-3">
+                  <a class="mr-3" href="#">
+                    <svg class="bd-placeholder-img" width="64" height="64" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 64x64"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"/><text x="50%" y="50%" fill="#dee2e6" dy=".3em">64x64</text></svg>
+                  </a>
+                  <div class="media-body">
+                    <h5 class="mt-0">Allen Iverson</h5>
+                    めちゃめちゃ、クセのあるアジンガーさんですね。笑　もしかしてタイムスリップしてアジングに目覚めたとかですか！？是非ご一緒させてください！剣術(ロッド捌き)教えてくだ候。笑
+                </div>
+
+                <hr class="border">
+              
+              </div>
+            </div>
+            
           </div>
         </div>
       </div>

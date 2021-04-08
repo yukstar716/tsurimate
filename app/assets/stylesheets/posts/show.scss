@@ -1,18 +1,9 @@
 .post-show {
   background-color: #f8f9fa;
 
-  .container {
-    background-color: #f8f9fa;
-  }
-
-  .row {
-    //ackground-color: #121212;
-    //margin-top: 60px;
-  }
-
   .col-sm-12 {
     margin-top: 5rem;
-    background-color: #black;
+    //background-color: #black;
   }
 
   .card {
@@ -22,26 +13,62 @@
   }
 
   .card-header {
-    background-color: #black;
+    //background-color: #f8f9fa;
+    height: 15rem;
+    background-color: #6ba1ff;
+    //background-image: url("4462565_s.jpg");
+    //background-size: cover;
+    //opacity: 0.5;
   }
 
   .header-title {
     text-align: center;
+    padding-top: 4rem;
+    color: whitesmoke;
   }
 
   .header-content {
     text-align: center;
+    color: whitesmoke;
   }
-  
-  .card-body {
-    //background-color: black;
+
+  .image_icon {
+    border-radius: 50%;
   }
-  
-  .card-title {
-    text-align: center;
+
+  .user-name {
+    position: absolute;
+    top: 12.7rem;
+    left: 4rem;
+    font-size: 15px;
   }
-  
-  .card-text {
-    text-align: center;
+
+  .comment-box {
+    margin-top: 3rem;
+    margin-left: 10%;
+  }
+
+  .border-first {
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 1%;
+    padding-bottom: 1%;
+  }
+
+  .media {
+    //margin-left: 5%;
+    margin-right: 10%;
+  }
+
+  .media-body {
+    padding-top: 2%;
+    padding-bottom: 1%;
+  }
+
+  .bd-placeholder-img {
+    border-radius: 50%;
+    margin-top: 8px;
+    margin-left: 5%;
+    //margin-left: 3%;
   }
 }
