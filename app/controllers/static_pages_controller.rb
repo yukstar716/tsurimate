@@ -1,6 +1,5 @@
 class StaticPagesController < ApplicationController
   def top
-    @posts = Post.all.order(created_at: "desc")
   end
 
   def about

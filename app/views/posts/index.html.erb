@@ -1,0 +1,30 @@
+<main role="main">
+
+<%= flash[:success] %>
+
+<section class="jumbotron text-center">
+  <div class="container">
+    <h1 class="jumbotron-heading">Tsurimate</h1>
+    <p class="lead text-muted">釣りにいく仲間を探そう。釣りに関する話題を共有してみんなで盛り上がろう。</p>
+    <p>
+      <a href="#" class="btn btn-primary my-2">Main call to action</a>
+      <a href="#" class="btn btn-secondary my-2">Secondary action</a>
+    </p>
+  </div>
+</section>
+
+<div class="album py-5 bg-light">
+  <%= render 'posts/posts' %>
+</div>
+
+</main>
+
+<div class="fixed-bottom">
+  <div class="d-flex align-items-center justify-content-center">
+    <nav class="navbar navbar-light bg-transparent">
+      <a class="navbar-brand" href="/posts">
+        <button type="button" class="btn btn-post btn-lg">質問を投稿する</button>
+      </a>
+    </nav>
+  </div>
+</div>

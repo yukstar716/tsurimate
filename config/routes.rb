@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   devise_for :users, controllers: { 
     :omniauth_callbacks => "omniauth_callbacks", 
   }
-  get 'top',   to: 'static_pages#top'  
+  get 'top',   to: 'posts#index'  
   get 'about', to: 'static_pages#about'
   get 'posts',  to: 'posts#new'
   get 'post', to: 'posts#show'
