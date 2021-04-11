@@ -5,6 +5,10 @@
 .user {
   background-color: #f8f9fa;
 
+  .row {
+    background-color: #f8f9fa;
+  }
+
   .page-header {
     margin-top: 5rem;
     height: 30rem;
@@ -23,11 +27,13 @@
   .title {
     text-align: center;
     margin-top: 2rem;
+    color: #454545;
   }
 
   .category {
     text-align: center;
     margin: 0;
+    color: #454545;
   }
 
   .content {
@@ -41,21 +47,31 @@
     text-align: center;
     margin: 15px, 0, 0;
     width: 145px;
+    color: #454545;
   }
 
   .card {
+    width: 100%;
     margin-top: 5rem;
-    background-color: #f8f9fa;
+    background-color: #ffffffe6;
+    border-radius: 0;
   }
 
   .intro {
     margin-top: 3rem;
-    margin-left: 3rem;
+    margin-left: 5rem;
     text-align: left;
   }
 
   .description {
     margin-top: 3rem;
-    margin-left: 3rem;
+    margin-left: 5rem;
+    margin-right: 5rem;
+    text-align: left;
+  }
+
+  .post-title {
+    margin-top: 8rem;
+    padding-bottom: 10rem;
   }
 }
