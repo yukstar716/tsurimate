@@ -5,10 +5,12 @@
         <div class="card">
           <div class="card-header">
             <h1 class="header-title"><%= @post.title%></h1>
-            <p class="header-content">昨日、横浜の某所へアジング探索に行ってきました。まだ、時期尚早だったのか、豆1匹という貧家でした... もしどなたか懲りずに言ってくれる方がいたらウェルカムです！</p>
-            <%= link_to top_path do %>
-              <%= image_tag "book.png", size: 6*6, class: "image_icon"%>
-              <p class="user-name">Allen iversionさんの投稿</p>
+              <p class="header-content"><%= @post.content %></p>
+            <%= link_to users_path do %>
+              <div class="d-flex ">
+                <%= image_tag "book.png", size: 6*6, class: "image_icon"%>
+                 <p class="user-name">Allen iversionさんの投稿</p>
+              </div>
             <% end %>
           </div>
           

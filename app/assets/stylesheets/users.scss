@@ -1,0 +1,61 @@
+// Place all the styles related to the Users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+.user {
+  background-color: #f8f9fa;
+
+  .page-header {
+    margin-top: 5rem;
+    height: 30rem;
+    background-color: aqua;
+  }
+
+  .photo-container {
+    text-align: center;
+  }
+
+  .image_icon {
+    margin-top: 5rem;
+    border-radius: 50%;
+  }
+
+  .title {
+    text-align: center;
+    margin-top: 2rem;
+  }
+
+  .category {
+    text-align: center;
+    margin: 0;
+  }
+
+  .content {
+    max-width: 450px;
+    margin: auto;
+  }
+
+  .social-description {
+    margin-top: 2rem;
+    display: inline-block;
+    text-align: center;
+    margin: 15px, 0, 0;
+    width: 145px;
+  }
+
+  .card {
+    margin-top: 5rem;
+    background-color: #f8f9fa;
+  }
+
+  .intro {
+    margin-top: 3rem;
+    margin-left: 3rem;
+    text-align: left;
+  }
+
+  .description {
+    margin-top: 3rem;
+    margin-left: 3rem;
+  }
+}

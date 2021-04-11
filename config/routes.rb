@@ -5,8 +5,9 @@ Rails.application.routes.draw do
   get 'top',   to: 'posts#index'  
   get 'about', to: 'static_pages#about'
   get 'posts',  to: 'posts#new'
-  get 'post', to: 'posts#show'
-  resources :posts, only: [:create, :destroy]
+  get 'posts', to: 'posts#show'
+  get 'users', to: 'users#show'
+  resources :posts
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   root 'application#hello'
   
