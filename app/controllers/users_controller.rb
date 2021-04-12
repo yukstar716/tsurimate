@@ -1,7 +1,6 @@
 class UsersController < ApplicationController
   
   def show
-    @user = users(params[:id])
-    @post = @user.posts.build(params[:id])
+    @posts = Post.all.order(created_at: "desc")
   end
 end

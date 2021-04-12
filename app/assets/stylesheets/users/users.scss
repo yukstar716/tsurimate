@@ -73,6 +73,66 @@
 
   .post-title {
     margin-top: 8rem;
-    padding-bottom: 10rem;
+    padding-bottom: 0;
   }
+  
+  .col-md-4 {
+    padding-top: 60px;
+    padding-left: 0;
+    padding-right: 0;
+    width: 100%;
+  }
+  
+  /* カード全体 */
+  .card {
+    background-color: #EFEFEF;
+    border: none;
+    border-radius: 2%;
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  /* カードのサイズ */
+  
+  .card-wrapper {
+    height: 7rem;
+  }
+  
+  /* 画像のスタイル */
+  
+  .card-image {
+    width: 100%;
+    height: 7rem;
+    border-top-left-radius: 2%;
+    border-top-right-radius: 2%;
+  }
+  
+  .card-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 23%;
+    right: 37%;
+    border-radius: 50%;
+    border: 5px solid #EFEFEF
+  }
+  
+  /* titleのスタイル */
+  
+  .card-text {
+    font-size: 25px;
+    font-weight: bold;
+    color: #000000;
+    margin-top: 1rem;
+  }
+  
+  /* ユーザー名 */
+  .d-flex {
+    position: absolute;
+    top: 90%;
+    left: 70%;
+  }
+  
 }
