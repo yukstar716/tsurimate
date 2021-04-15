@@ -40,7 +40,7 @@ ActiveRecord::Schema.define(version: 2021_03_31_232205) do
     t.datetime "updated_at", precision: 6, null: false
     t.string "provider"
     t.string "uid"
-    t.string "username"
+    t.string "username", null: false
     t.string "image"
     t.string "description"
     t.index ["email"], name: "index_users_on_email", unique: true
