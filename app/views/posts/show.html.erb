@@ -9,7 +9,7 @@
             <%= link_to users_path(@post.user_id) do %>
               <div class="d-flex ">
                 <%= image_tag "book.png", size: 6*6, class: "image_icon"%>
-                 <p class="user-name">Allen iversionさんの投稿</p>
+                 <p class="user-name"><%= @user.username %>さんの投稿</p>
               </div>
             <% end %>
           </div>
