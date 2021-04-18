@@ -10,9 +10,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_04_18_142222) do
+ActiveRecord::Schema.define(version: 2021_04_18_145124) do
 
-  create_table "comment_to_posts", force: :cascade do |t|
+  create_table "post_comments", force: :cascade do |t|
     t.text "content"
     t.integer "user_id"
     t.integer "post_id"
