@@ -1,0 +1,2 @@
+class CommentToPost < ApplicationRecord
+end
