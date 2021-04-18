@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   get 'posts',  to: 'posts#show'
   get 'users',  to: 'users#show'
   resources :posts
-  resources :users, only: [:show, :edit]
+  resources :users, only: [:show, :edit, :update]
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   root 'application#hello'
   

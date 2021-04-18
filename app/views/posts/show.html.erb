@@ -6,7 +6,7 @@
           <div class="card-header">
             <h1 class="header-title"><%= @post.title%></h1>
               <p class="header-content"><%= @post.content %></p>
-            <%= link_to users_path(@post.user_id) do %>
+            <%= link_to user_path(@user) do %>
               <div class="d-flex ">
                 <%= image_tag "book.png", size: 6*6, class: "image_icon"%>
                  <p class="user-name"><%= @user.username %>さんの投稿</p>
