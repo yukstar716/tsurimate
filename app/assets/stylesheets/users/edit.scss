@@ -10,19 +10,37 @@
     background-color: #f8f9fa; 
   }
 
-  .card {
-    background-color: #white; 
+  .title {
+    padding-bottom: 2rem;
+    text-align: center;
+  }
+
+  .form-card {
+    width: 100%;
+    background-color: #ffffffe6; 
     margin-top: 3rem;
     margin-bottom: 3rem;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 
   .form-group {
+    //padding-top: 1rem;
+  }
 
+  .border-line {
+    padding-top: 1rem;
   } 
 
   .form-content {
     padding-top: 1rem;
     margin-left: 5em;
     margin-right: 5em;
+  }
+
+  .btn {
+    width: 100%;
   }
 }
