@@ -1,10 +1,23 @@
-user-edit {
-  //background-color: #f8f9fa; 
+.user-edit {
+  background-color: #f8f9fa; 
 
-  .form-title {
-    padding-top: 1rem;
-    margin-left: 5em;
-    margin-right: 5em;
+  .container {
+    //margin-top: 5rem;
+    //background-color: #f8f9fa; 
+  }
+
+  .row {
+    background-color: #f8f9fa; 
+  }
+
+  .card {
+    background-color: #white; 
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
+
+  .form-group {
+
   } 
 
   .form-content {
