@@ -19,48 +19,37 @@
           <hr class="border-first">
         
           <!--コメントのテンプレート-->
+          <% @comments.each do |c| %>
           <div class="media">
-            <% @comments.each do |c| %>
-              <% unless c.user.blank? %>
-                <svg class="bd-placeholder-img mr-3" 
-                  width="64" height="64" xmlns="http://www.w3.org/2000/svg" 
-                  preserveAspectRatio="xMidYMid slice" focusable="false" 
-                  role="img" aria-label="Placeholder: 64x64"><title>Placeholder</title>
-                  <rect width="100%" height="100%" fill="#868e96"/>
-                  <text x="50%" y="50%" fill="#dee2e6" dy=".3em">64x64</text></svg>
-              <% end %>
-              <%= c.user.username unless c.user.blank? %>
-              <div class="media-body">
-                <h5 class="mt-0">Yukstar</h5>
-                <br />
-              <%= c.content %>
-
-                <hr class="border">
+            <% unless c.user.blank? %>
+              <svg class="bd-placeholder-img mr-3" 
+                width="64" height="64" xmlns="http://www.w3.org/2000/svg" 
+                preserveAspectRatio="xMidYMid slice" focusable="false" 
+                role="img" aria-label="Placeholder: 64x64"><title>Placeholder</title>
+                <rect width="100%" height="100%" fill="#868e96"/>
+                <text x="50%" y="50%" fill="#dee2e6" dy=".3em">64x64</text></svg>
+            <% end %>
               
-              <div class="media mt-3">
-                <a class="mr-3" href="#">
-                  <svg class="bd-placeholder-img" width="64" height="64" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 64x64"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"/><text x="50%" y="50%" fill="#dee2e6" dy=".3em">64x64</text></svg>
-                </a>
-                <div class="media-body">
-                  <h5 class="mt-0">Allen Iverson</h5>
-                  おー！！なんと！！お隣でライトグリーンのウィンドブレイカー着てた方でしょうか？？よろしくお願いします〜♪
-                </div>
+              <div class="media-body">
+                <h5 class="mt-0"><%= c.user.username unless c.user.blank? %></h5>
+                <br />
+                <%= c.content %>
+
+               
               </div>
-
-              <hr class="border">
-
-              <% end %>
             </div>
-             <% if user_signed_in? %>
+             <hr class="border-center">
+          <% end %>
+
+          <% if user_signed_in? %>
           <%= form_with(model: [@post, @comment], local: true) do |f| %>
-            <%= f.text_area :content, class: "form-control", rows: 5 %>
-            <%= button_tag type: "submit", class: "btn btn-sucess float-right mt-1" do %>
-              <i class="far fa-comments"></i> コメントする
+            <%= f.text_area :content, class: "form-control", rows: 3 %>
+              <%= button_tag type: "submit", class: "btn btn-success float-right mt-1" do %>
+                <i class="far fa-comments"></i> コメントする
+              <% end %>
             <% end %>
           <% end %>
-        <% end %>
            
-          </div>
         </div>
       </div>
     </div>
