@@ -14,6 +14,13 @@ class PostCommentsController < ApplicationController
     end
   end
 
+  def destroy
+    @comment = PostComment.find(params[:id])
+    if @post_comment.destroy
+      render :show
+    end
+  end
+
   private
 
   def comment_params

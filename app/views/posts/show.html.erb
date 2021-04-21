@@ -34,6 +34,12 @@
                 <h5 class="mt-0"><%= c.user.username unless c.user.blank? %></h5>
                 <br />
                 <%= c.content %>
+                <% if c.user == current_user %>
+                  <p class="comment-delete"><%= link_to "削除", 
+                                                post_post_comment_path(c.post_id, c.id), 
+                                                data: {confirm: '本当に削除しますか？'}, 
+                                                method: :delete %>
+                <% end %>
 
               
               </div>
