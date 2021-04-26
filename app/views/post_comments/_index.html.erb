@@ -2,17 +2,18 @@
 <% @post.post_comments.each do |c| %>
   <div class="media">
     <% unless c.user.blank? %>
-      <svg class="bd-placeholder-img mr-3" 
-        width="64" height="64" xmlns="http://www.w3.org/2000/svg" 
-        preserveAspectRatio="xMidYMid slice" focusable="false" 
-        role="img" aria-label="Placeholder: 64x64"><title>Placeholder</title>
+      <svg class="bd-placeholder-img mr-3" width="64" height="64" 
+        xmlns="http://www.w3.org/2000/svg" 
+        preserveAspectRatio="xMidYMid slice" 
+        focusable="false" role="img" aria-label="Placeholder: 64x64">
+        <title>Placeholder</title>
         <rect width="100%" height="100%" fill="#868e96"/>
-        <text x="50%" y="50%" fill="#dee2e6" dy=".3em">64x64</text></svg>
+        <text x="50%" y="50%" fill="#dee2e6" dy=".3em">64x64</text>
+      </svg>
     <% end %>
       
     <div class="media-body">
       <h5 class="mt-0"><%= c.user.username unless c.user.blank? %></h5>
-      <br />
       <%= c.content %>
       <% if c.user == current_user %>
         <p class="comment-delete">
@@ -25,4 +26,6 @@
     </div>
   </div>
   <hr class="border-center">
+
+  <%= render 'post_comment_replies/index' %>
 <% end %>

@@ -1,0 +1,31 @@
+<!--コメントの返信一覧-->
+<% @post_comment_replies.each do |r| %>
+  <div class="media mt-3">
+    <% unless r.user.blank? %>
+      <a class="mr-3" href="#">
+        <svg class="bd-placeholder-img" width="64" height="64" 
+          xmlns="http://www.w3.org/2000/svg" 
+          preserveAspectRatio="xMidYMid slice" 
+          focusable="false" role="img" aria-label="Placeholder: 64x64">
+          <title>Placeholder</title>
+          <rect width="100%" height="100%" fill="#868e96"/>
+          <text x="50%" y="50%" fill="#dee2e6" dy=".3em">64x64</text>
+        </svg>
+      </a>
+    <% end %>
+    
+    <div class="media-body">
+      <h5 class="mt-0"><%= r.user.username unless r.user.blank? %></h5>
+      <%= r.content %>
+      <%= if r.content == current_user %>
+        <p class="comment-reply-delete">
+          <%= link_to "削除", 
+                      post_post_comment_post_comment_reply(r.post_id, r.comment_id, r.id),
+                      method: :delete,
+                      data: { confirm: "本当に削除しますか？" },
+                      remote: true %>
+      <% end %></p>
+    </div>
+  </div>
+  <hr class="border">
+<% end %>
