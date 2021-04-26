@@ -3,5 +3,5 @@ class PostComment < ApplicationRecord
   belongs_to :post
   has_many :post_comment_replies, dependent: :destroy
 
-  validates :content, presence :true
+  #validates :content, presence :true
 end
