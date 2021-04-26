@@ -10,8 +10,9 @@ Rails.application.routes.draw do
   get 'posts',  to: 'posts#new'
   get 'posts',  to: 'posts#show'
   get 'users',  to: 'users#show'
+  
   resources :posts do
-    resources :post_comments, only: [:create, :destroy]
+    resources :post_comments, only: [:create, :destroy]#, shallow: true
   end
   resources :users, only: [:show, :edit, :update]
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html

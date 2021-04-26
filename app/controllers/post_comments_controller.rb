@@ -1,6 +1,7 @@
 class PostCommentsController < ApplicationController
+  before_action :set_post, only: [:create, :destroy]
   #before_action :authenticate_user!
-
+  
   def create
     post = Post.find(params[:post_id])
     @comment = post.post_comments.build(comment_params)
@@ -15,13 +16,20 @@ class PostCommentsController < ApplicationController
   end
 
   def destroy
-    @comment = PostComment.find(params[:id])
-    if @post_comment.destroy
-      render :show
+    @comment = PostComment.find_by(post_id: params[:post_id], id: params[:id])
+    #binding.pry
+    if @comment.destroy
+      redirect_to controller: :posts, action: :index
+    else
+      redirect_to controller: :posts, action: :index
     end
   end
 
   private
+
+  def set_post
+    @post = Post.find(params[:post_id])
+  end
 
   def comment_params
     params.require(:post_comment).permit(:content)

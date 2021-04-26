@@ -22,6 +22,10 @@ gem 'jquery-rails'
 # Use Active Model has_secure_password
 gem 'bcrypt', '~> 3.1.7'
 
+# Devise
+gem 'devise', git: 'https://github.com/heartcombo/devise'
+gem 'omniauth-twitter'
+
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
@@ -36,13 +40,6 @@ group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 
   gem 'rspec-rails'
-
-  # Devise
-  gem 'devise', git: 'https://github.com/heartcombo/devise'
-  gem 'omniauth-twitter'
-
-  gem 'annotate'
-
 end
 
 group :development do
@@ -56,6 +53,9 @@ group :development do
   gem 'spring'
   gem 'spring-commands-rspec'
   gem 'pry-rails'
+  gem 'annotate'
+  gem "better_errors"
+  gem "binding_of_caller"
 end
 
 group :test do
