@@ -1,5 +1,5 @@
 <!--コメントの返信一覧-->
-<% @post_comment_replies.each do |r| %>
+<% @post.post_comment_replies.each do |r| %>
   <div class="media mt-3">
     <% unless r.user.blank? %>
       <a class="mr-3" href="#">
@@ -17,7 +17,7 @@
     <div class="media-body">
       <h5 class="mt-0"><%= r.user.username unless r.user.blank? %></h5>
       <%= r.content %>
-      <%= if r.content == current_user %>
+      <% if r.content == current_user %>
         <p class="comment-reply-delete">
           <%= link_to "削除", 
                       post_post_comment_post_comment_reply(r.post_id, r.comment_id, r.id),
@@ -27,5 +27,7 @@
       <% end %></p>
     </div>
   </div>
+
+  <%= render 'post_comment_replies/form' %>
   <hr class="border">
 <% end %>

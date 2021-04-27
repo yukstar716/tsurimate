@@ -11,6 +11,7 @@ class PostsController < ApplicationController
     @user = User.find_by(id: @post.user_id)
     @comment = PostComment.new
     @comments = @post.post_comments.build
+    @comment_replies = @post.post_comment_replies.build
     #@user = User.find_by(id: @post.user_id)
     #@comments = @post.post_comments.order(created_at: :desc)
   end
