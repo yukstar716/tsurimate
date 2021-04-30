@@ -1,5 +1,5 @@
 <!--コメントのテンプレート-->
-<% @post.post_comments.each do |c| %>
+<% post_comments.each do |c| %>
   <div class="media">
     <% unless c.user.blank? %>
       <svg class="bd-placeholder-img mr-3" width="64" height="64" 
@@ -26,6 +26,5 @@
     </div>
   </div>
   <hr class="border-center">
-
-  <%= render 'post_comment_replies/index' %>
+  <%= render partial: 'post_comment_replies/index', locals: { comment: c } %>
 <% end %>

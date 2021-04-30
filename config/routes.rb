@@ -12,8 +12,8 @@ Rails.application.routes.draw do
   get 'users',  to: 'users#show'
   
   resources :posts do
-    resources :post_comments,          only: [:create, :destroy] do #, shallow: true
-      resources :post_comment_replies, only: [:create, :destroy]
+    resources :post_comments,          only: [:new, :create, :destroy] do
+      resources :post_comment_replies, only: [:new, :create, :destroy]
     end
   end
   resources :users, only: [:show, :edit, :update]

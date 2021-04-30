@@ -18,10 +18,10 @@
           <hr class="border-first">
         
           <!--コメントのテンプレート-->
-          <%= render 'post_comments/index' %>
+          <%= render partial: 'post_comments/index', locals: { post_comments: @comments } %>
 
           <!--送信ボタンのテンプレート-->
-          <%= render 'post_comments/form' %>
+          <%= render partial: 'post_comments/form', locals: { post_comment: @comment, post: @post} %>
            
         </div>
       </div>
