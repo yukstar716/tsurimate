@@ -18,7 +18,9 @@
           <hr class="border-first">
         
           <!--コメントのテンプレート-->
+          <div id="comments_area">
           <%= render partial: 'post_comments/index', locals: { post_comments: @comments } %>
+          </div>
 
           <!--送信ボタンのテンプレート-->
           <%= render partial: 'post_comments/form', locals: { post_comment: @comment, post: @post} %>

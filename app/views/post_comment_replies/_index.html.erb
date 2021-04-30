@@ -1,43 +1,52 @@
 <!--コメントの返信一覧-->
-<% @comment_replies.each do |r| %>
-  <% if r.post_comment_id == comment.id %>
-    <div class="media mt-3">
-        <a class="mr-3" href="#">
-          <svg class="bd-placeholder-img" width="64" height="64" 
-            xmlns="http://www.w3.org/2000/svg" 
-            preserveAspectRatio="xMidYMid slice" 
-            focusable="false" role="img" aria-label="Placeholder: 64x64">
-            <title>Placeholder</title>
-            <rect width="100%" height="100%" fill="#868e96"/>
-            <text x="50%" y="50%" fill="#dee2e6" dy=".3em">64x64</text>
-          </svg>
-        </a>
-      
-      <div class="media-body">
-        <h5 class="mt-0"><%= r.user.username unless r.user.blank? %></h5>
-        <%= r.content %>
-        <% if r.user == current_user %>
-          <p class="comment-reply-delete">
-            <%= link_to "削除", 
-                        post_post_comment_post_comment_reply_path(r.post_id, r.post_comment_id, r.id),
-                        method: :delete,
-                        data: { confirm: "本当に削除しますか？" },
-                        remote: true %>
-            <% end %>
-          </p>
+<div class="reply-area">
+  <% @comment_replies.each do |r| %>
+    <% if r.post_comment_id == comment.id %>
+    <div class="square">
+    <div class="vertical-line-left">
+      <div class="media mt-3">
+          <a class="mr-3" href="#">
+            <svg class="bd-placeholder-img" width="64" height="64" 
+              xmlns="http://www.w3.org/2000/svg" 
+              preserveAspectRatio="xMidYMid slice" 
+              focusable="false" role="img" aria-label="Placeholder: 64x64">
+              <title>Placeholder</title>
+              <rect width="100%" height="100%" fill="#868e96"/>
+              <text x="50%" y="50%" fill="#dee2e6" dy=".3em">64x64</text>
+            </svg>
+          </a>
+        
+        <div class="media-body">
+          <h5 class="mt-0"><%= r.user.username unless r.user.blank? %></h5>
+          <%= r.content %>
+          <% if r.user == current_user %>
+            <p class="comment-reply-delete">
+              <%= link_to "削除", 
+                          post_post_comment_post_comment_reply_path(r.post_id, r.post_comment_id, r.id),
+                          method: :delete,
+                          data: { confirm: "本当に削除しますか？" },
+                          remote: true %>
+              <% end %>
+            </p>
+        </div>
       </div>
     </div>
+    </div>
 
-    <hr class="border">
+  <hr class="border-center">
   <% end %>
 <% end %>
-<% if user_signed_in? %>
-  <%= form_with(model: [@post, comment, PostCommentReply.new]) do |f| %>
-    <div class="form-comment-reply">
-      <%= f.text_area :content, placeholder: "コメントに返信してみましょう！", class: "form-control", rows: 2 %>
-        <%= button_tag type: "submit", class: "btn btn-success float-right mt-1" do %>
-          <i class="far fa-comments"></i>返信
-        <% end %>
-      <% end %>
-    </div>
-<% end %>
+  <div class="reply-form">
+    <% if user_signed_in? %>
+      <%= form_with(model: [@post, comment, PostCommentReply.new]) do |f| %>
+        <div class="form-comment-reply">
+          <%= f.text_area :content, placeholder: "コメントに返信してみましょう！", class: "form-control", rows: 2 %>
+            <%= button_tag type: "submit", class: "btn btn-success float-right mt-1" do %>
+              <i class="far fa-comments"></i>返信
+            <% end %>
+          <% end %>
+        </div>
+    <% end %>
+  </div>
+  <hr class="border-center">
+</div>

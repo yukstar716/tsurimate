@@ -79,13 +79,19 @@
     width: 80%;
     //margin-left: 10%;
     margin-top: 1%;
-    padding-bottom: 1%;
+    margin-bottom: 1%;
   }
 
   /* comment */
 
+  .square {
+    background-color: #F9F8FA;
+    margin-right: 10%;
+    margin-left: 10%
+  }
+
   .media {
-    margin-left: 4%;
+    margin-left: 5%;
     margin-right: 10%;
   }
 
@@ -98,7 +104,7 @@
   .bd-placeholder-img {
     border-radius: 50%;
     margin-top: 8px;
-    margin-left: 5%;
+    margin-left: auto;
   }
 
   /* comment form */
