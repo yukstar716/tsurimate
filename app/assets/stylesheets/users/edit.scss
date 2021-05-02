@@ -15,13 +15,40 @@
     text-align: center;
   }
 
+  .avatar-image {
+    text-align: center;
+  }
+
+  .icon-success {
+    border-radius: 50%;
+    object-fit: cover;
+    width: 140px;
+    height: 140px;
+    //background-color: #ccc;
+    //border: 1px solid #ccc;
+  }
+
+  .icon-default {
+    border-radius: 50%;
+    object-fit: cover;
+    width: 140px;
+    height: 140px;
+  }
+
+  .image-field {
+    padding-top: 2%;
+    padding-bottom: 7%;
+    //padding-left: 30%;
+    //padding-right: 30%;
+  }
+
   .form-card {
     width: 100%;
     background-color: #ffffffe6; 
     margin-top: 3rem;
     margin-bottom: 3rem;
     padding-top: 4rem;
-    padding-bottom: 4rem;
+    padding-bottom: 1rem;
     padding-left: 1rem;
     padding-right: 1rem;
   }

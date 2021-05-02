@@ -8,6 +8,8 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable,
          :lockable, :timeoutable, :omniauthable, omniauth_providers:[:twitter]
 
+  mount_uploader :image, ImageUploader
+
   def self.from_omniauth(auth)
     find_or_create_by(provider: auth["provider"], uid: auth["uid"]) do |user|
       user.provider = auth["provider"]
@@ -25,6 +27,5 @@ class User < ApplicationRecord
       super
     end
   end
-
 
 end
