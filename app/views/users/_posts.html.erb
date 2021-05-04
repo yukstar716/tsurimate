@@ -4,8 +4,12 @@
       <div class="col-md-6">
         <div class="card mb-6">
           <%= link_to post do %>
+            <% if @user.image? %>
+              <%= image_tag @user.image.url, size: 9*9, class: "card-icon" %>
+            <% else %>
+              <%= image_tag "default.jpeg", size: 9*9, class: "card-icon"%>
+            <% end %>
             <%= image_tag "4268892_s.jpg", class: "card-image" %>
-              <%= image_tag "book.png", size: 9*9, class: "card-icon" %>
               <div class="card-wrapper">
                 <div class="card-body">
                   <p class="card-text"><%= post.title %></p>

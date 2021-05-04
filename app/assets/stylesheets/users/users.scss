@@ -33,6 +33,9 @@
   .image_icon {
     margin-top: 1.8rem;
     border-radius: 50%;
+    object-fit: cover;
+    width: 140px;
+    height: 140px;
   }
 
   .title {
@@ -54,6 +57,7 @@
   }
 
   .social-description {
+    font-size: 1.2vw;
     margin-top: 2rem;
     display: inline-block;
     text-align: center;
@@ -127,13 +131,13 @@
     top: 23%;
     right: 37%;
     border-radius: 50%;
-    border: 5px solid #EFEFEF
+    border: 5px solid #EFEFEF;
   }
   
   /* titleのスタイル */
   
   .card-text {
-    font-size: 25px;
+    font-size: 1.5vw;
     font-weight: bold;
     color: #000000;
     margin-top: 1rem;

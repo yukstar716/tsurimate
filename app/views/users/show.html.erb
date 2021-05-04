@@ -9,7 +9,11 @@
         <div class="container">
           <%= link_to "プロフィール編集", edit_user_path, class: "edit-content" %>
           <div class="photo-container">
-            <%= image_tag "book.png", size: 12*12, class: "image_icon" %>
+          <% if @user.image? %>
+            <%= image_tag @user.image.url, size: 12*12, class: "image_icon" %>
+          <% else %>
+            <%= image_tag "default.jpeg", size: 12*12, class: "image_icon" %>
+          <% end %>
           </div>
 
           <h3 class="title"><%= @user.username %></h3>

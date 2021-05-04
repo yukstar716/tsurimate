@@ -1,7 +1,7 @@
 /* ボタンの位置を変更 */
 .fixed-bottom {
   position: fixed;
-  right: 39%;
+  right: 34%;
   bottom: 11%;
 }
 
@@ -71,7 +71,7 @@
 /* titleのスタイル */
 
 .card-text {
-  font-size: 25px;
+  font-size: 1.5vw; //vw:相対指定。ビューポートの幅の何パーセントか
   font-weight: bold;
   color: #000000;
   margin-top: 1rem;
@@ -79,9 +79,10 @@
 
 /* ユーザー名 */
 .d-flex {
+  font-size: 1.1vw;
   position: absolute;
   top: 90%;
-  left: 70%;
+  left: 65%;
 }
 
 /* 以下テンプレートtopのcss */
