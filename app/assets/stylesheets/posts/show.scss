@@ -52,6 +52,9 @@
 
   .image_icon {
     border-radius: 50%;
+    object-fit: cover;
+    width: 36px;
+    height: 36px;
   }
 
   .user-name {

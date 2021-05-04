@@ -5,12 +5,17 @@
         <div class="card mb-4">
           <%= link_to post do %>
             <%= image_tag "4268892_s.jpg", class: "card-image" %>
-              <%= image_tag "book.png", size: 9*9, class: "card-icon" %>
+              <% if post.user.image? %>
+                <%= image_tag post.user.image.url, size: 9*9, class: "card-icon" %>
+              <% else %>
+                <%= image_tag "default.jpeg", size: 9*9, class: "card-icon" %>
+              <% end %>
+
               <div class="card-wrapper">
                 <div class="card-body">
                   <p class="card-text"><%= post.title %></p>
                   <div class="d-flex justify-content-end align-items-end">
-                    <small class="text-muted">ユーザー名</small>
+                    <small class="text-muted"><%= post.user.username %></small>
                   </div>
                 </div>
               </div>

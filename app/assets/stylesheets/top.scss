@@ -34,7 +34,7 @@
 
 /* カード全体 */
 .card {
-  background-color: #EFEFEF;
+  background-color: #efefef;
   border: none;
   border-radius: 2%;
   width: 95%;
@@ -65,7 +65,10 @@
   top: 23%;
   right: 37%;
   border-radius: 50%;
-  border: 5px solid #EFEFEF
+  border: 5px solid #EFEFEF;
+  object-fit: cover;
+  width: 80px;
+  height: 80px;
 }
 
 /* titleのスタイル */

@@ -15,8 +15,11 @@
             </li>
             <li class="nav-item" href="#">
               <%= link_to top_path do %>
-                <%= image_tag "book.png", size: 6*6, alt: "Test icon", 
-                        id: "assets", class: "user_icon" %>
+                <% if @post.user.image? %>
+                  <%= image_tag @post.user.image.url, size: 6*6, class: "user_icon" %>
+                <% else %>
+                  <%= image_tag "default.jpeg", size: 6*6, class: "user_icon" %>
+                <% end %>
               <% end %>
             </li>
           <% else %>
