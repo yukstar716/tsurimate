@@ -4,7 +4,7 @@
       <div class="col-md-4">
         <div class="card mb-4">
           <%= link_to post do %>
-            <%= image_tag "4268892_s.jpg", class: "card-image" %>
+            <%= image_tag random_image, class: "card-image" %>
               <% if post.user.image? %>
                 <%= image_tag post.user.image.url, size: 9*9, class: "card-icon" %>
               <% else %>

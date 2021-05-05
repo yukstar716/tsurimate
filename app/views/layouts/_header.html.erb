@@ -14,9 +14,9 @@
               <a class="nav-link" href="/users/sign_out">Log Out</a>
             </li>
             <li class="nav-item" href="#">
-              <%= link_to top_path do %>
-                <% if @post.user.image? %>
-                  <%= image_tag @post.user.image.url, size: 6*6, class: "user_icon" %>
+              <%= link_to current_user do %>
+                <% if current_user.image? %>
+                  <%= image_tag current_user.image.url, size: 6*6, class: "user_icon" %>
                 <% else %>
                   <%= image_tag "default.jpeg", size: 6*6, class: "user_icon" %>
                 <% end %>
