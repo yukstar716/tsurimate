@@ -27,9 +27,13 @@
       </div>
     </div>
     </div>
-    <details>
-      <summary><%= c.post_comment_replies.count %>件の返信を表示</summary>
-        <%= render partial: 'post_comment_replies/index', locals: { comment: c } %>
-    </details>
+    <% if c.post_comment_replies.any? %>
+      <details>
+        <summary><%= c.post_comment_replies.count %>件の返信を表示</summary>
+          <%= render partial: 'post_comment_replies/index', locals: { comment: c } %>
+      </details>
+    <% else %>
+          <%= render partial: 'post_comment_replies/index', locals: { comment: c } %>
+    <% end %>
   <% end %>
 </div>
