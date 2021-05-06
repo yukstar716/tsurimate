@@ -124,7 +124,25 @@
     margin-bottom: 1rem;
   }
 
+  .icon-success {
+    border-radius: 50%;
+    object-fit: cover;
+    width: 65px;
+    height: 65px;
+  }
+
+  .icon-default {
+    border-radius: 50%;
+    object-fit: cover;
+    width: 65px;
+    height: 65px;
+  }
+
   .btn {
     margin-left: auto;
+  }
+
+  .fa-comments {
+    padding-right: 3px;
   }
 }
