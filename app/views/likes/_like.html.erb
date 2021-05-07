@@ -1,0 +1,9 @@
+<% if post.liked_by?(current_user) %>
+  <%= like_to(post_like_path(post), method: :delete, remote: true, id: :"like-button-#{post.id}") do %>
+    <i class="far fa-thumbs-up"></i><p class="like-message">役に立った！</p>
+  <% end %>
+<% else %>
+  <%= link_to(post_likes_path(post), method: :post, remote: true, id: :"like-button-#{post.id}") do %>
+    <i class="far fa-thumbs-up"></i><p class="like-message">役に立った！</p>
+  <% end %>
+<% end %>

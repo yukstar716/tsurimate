@@ -67,6 +67,26 @@
     font-size: 15px;
   }
 
+  .like {
+    padding-left: 45rem;
+    padding-top: auto;
+    margin-bottom: 0;
+  }
+
+  .fa-thumbs-up {
+    padding: 5px;
+    font-size: 40px;
+    background-color: white;
+    border-radius: 50%;
+    //background-size: 50px;
+  }
+
+  .like-message {
+    padding-left: 48rem;
+    padding-top: 30px;
+    margin-bottom: 0;
+  }
+
   .comment-box {
     margin-top: 3rem;
     margin-left: 10%;
