@@ -9,21 +9,20 @@
             <%= link_to user_path(@post.user_id) do %>
               <div class="d-flex ">
                 <% if @post.user.image? %>
-                  <%= image_tag @post.user.image.url, size: 6*6, class: "image_icon" %>
+                  <p><%= image_tag @post.user.image.url, size: 6*6, class: "image_icon" %></p>
                 <% else %>
-                  <%= image_tag "default.jpeg", size: 6*6, class: "image_icon"%>
+                  <p><%= image_tag "default.jpeg", size: 6*6, class: "image_icon"%></p>
                 <% end %>
                  <p class="user-name"><%= @post.user.username %>さんの投稿</p>
+
+                <div id=" like-btn-<%= @post.id %>">
+                  <p class="like">
+                    <%= render partial: "likes/like", locals: { post: @post } %>
+                  </p>
+                </div>
               </div>
             <% end %>
 
-            <div class="d-flex">
-              <div id=" like-btn-<%= @post.id %>">
-                <p class="like">
-                  <%= render partial: "likes/like", locals: { post: @post } %>
-                </p>
-              </div>
-            </div>
           </div>
           
           <h4 class="comment-box">コメント一覧</h4>
