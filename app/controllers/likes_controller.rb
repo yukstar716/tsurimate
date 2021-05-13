@@ -6,6 +6,9 @@ class LikesController < ApplicationController
     user = current_user
     post = Post.find(params[:post_id])
     like = Like.create(user_id: user.id, post_id: post.id)
+    #like = current_user.likes.new(post_id: @post.id)
+    #like.save
+    #likes = Like.where(post_id: @post.id)
   end
 
   def destroy

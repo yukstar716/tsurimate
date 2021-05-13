@@ -26,6 +26,9 @@
     //min-height: 22rem;
     height: 23rem;
     background-color: #6ba1ff;
+    //background-color: #5DADE2;
+    //background-color: #5499C7;
+    //background-color: #45B39D; -> green ish
     width: 100%;
     //background-image: url("4462565_s.jpg");
     //background-size: cover;
@@ -74,14 +77,15 @@
 
 
   .like {
-    padding-left: 30rem;
-    vertical-align: middle;
+    padding-left: auto;
+    //vertical-align: middle;
     //margin-bottom: 0;
   }
 
   .fa-thumbs-up {
     border-radius: 50%;
     padding: 5px;
+    //margin: 1px;
     margin-right: 0.5rem;
     width: 40px;
     height: 40px;
@@ -89,9 +93,13 @@
     vertical-align: middle;
   }
 
-  .like-message {
-    padding-top: auto;
-    margin-bottom: auto;
+  .like-inactive {
+    background:lightgray;
+    color: red;
+  }
+
+  .count-like {
+    padding-left: 30rem;
   }
 
   .comment-box {
@@ -116,9 +124,9 @@
   /* comment */
 
   .square {
-    background-color: #F9F8FA;
-    margin-right: 10%;
-    margin-left: 10%
+    //background-color: #F9F8FA;
+    margin-right: 5%;
+    margin-left: 5%
   }
 
   .media {

@@ -15,7 +15,7 @@
                 <% end %>
                  <p class="user-name"><%= @post.user.username %>さんの投稿</p>
 
-                <div id=" like-btn-<%= @post.id %>">
+                <div id="like-btn-<%= @post.id %>">
                   <p class="like">
                     <%= render partial: "likes/like", locals: { post: @post } %>
                   </p>
