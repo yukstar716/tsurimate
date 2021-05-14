@@ -146,6 +146,23 @@
     margin-left: auto;
   }
 
+  .accordion-reply {
+    //position: relative;  /* 追加 */
+    //text-align: left;
+    padding-left: 100px;
+    line-height: 50px;
+    cursor: pointer;
+    color: #3ea6ff;
+  }
+
+  .accordion-reply-form {
+    padding-left: 170px;
+    color: #000000;
+    
+    //line-height: 50px;
+    //cursor: pointer;
+  }
+
   /* comment form */
 
   .form-comment {
