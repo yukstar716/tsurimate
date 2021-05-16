@@ -12,6 +12,14 @@ class User < ApplicationRecord
 
   mount_uploader :image, ImageUploader
 
+  validates :username, presence:   true
+  validates :email,    presence:   true,
+                       uniqueness: true
+  validates :password, presence: true,
+                       length: { minimum: 6 }
+
+
+
   def self.from_omniauth(auth)
     find_or_create_by(provider: auth["provider"], uid: auth["uid"]) do |user|
       user.provider = auth["provider"]
