@@ -1,20 +1,22 @@
 require 'rails_helper'
 
 RSpec.describe Post, type: :model do
-  #ユーザー単位では重複した投稿タイトルを許可しない
-  it "does not allow duplicate post names per user" do
-    user = User.create(
+  before do
+    @user = User.create(
       username: "hogehoge",
       email:    "hogehoge@g.com",
       password: "hogehoge",
     )
 
-    user.posts.create(
+    @user.posts.create(
       title: "This is duplicate post",
       content: "this is test",
     )
-
-    new_post = user.posts.build(
+  end
+  #ユーザー単位では重複した投稿タイトルを許可しない
+  it "does not allow duplicate post names per user" do
+    
+    new_post = @user.posts.build(
       title: "This is duplicate post",
       content: "this is testttt",
     )
@@ -25,16 +27,6 @@ RSpec.describe Post, type: :model do
 
   #二人のユーザーが同じ投稿タイトルを使うことは許可すること
   it "allows two users to share a project name" do
-    user = User.create(
-      username: "hogehoge",
-      email:    "hogehoge@g.com",
-      password: "hogehoge",
-    )
-
-    user.posts.create(
-      title: "This is duplicate post",
-      content: "this is test",
-    )
 
     another_user = User.create(
       username: "hogehogehoge",

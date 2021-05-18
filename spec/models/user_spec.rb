@@ -43,7 +43,7 @@ RSpec.describe User, type: :model do
     user = User.new(
       username: "yukstarrrr",
       email:    "yuk@g.com",
-      password: "yukstarrrr"
+      password: "yukstarrrr",
     )
     user.valid?
     expect(user.errors[:email]).to include("has already been taken")  
@@ -51,14 +51,33 @@ RSpec.describe User, type: :model do
   # ユーザーのフルネームを文字列として返すこと
   it "returns a user's full name as a string"
 
-  # パスワードは6文字以上であること
-  it "is valid password more than 6 characters" do
-    user = User.new(
-      username: "hoge",
-      email:    "hoge@g.com",
-      password: "hogehoge"
-    )
-    #user.valid?
-    expect(user).to be_valid
+  describe "confirm password characters" do
+    before do
+      @correct_user = User.new(
+        username: "hoge",
+        email:    "hoge@g.com",
+        password: "hogeho",
+      )
+
+      @incorrect_user = User.new(
+        username: "hoge",
+        email:    "hoge@g.com",
+        password: "hogeh",
+      )
+    end
+
+    context "when a password is valid" do
+      # パスワードは6文字以上であること
+      it "is valid password more than 6 characters" do
+        expect(@correct_user).to be_valid
+      end
+    end
+
+    context "when a pasword is invalid" do
+      #パスワードが6文字以下である場合エラーとなる
+      it "is invalid password less than 6 characters" do
+        expect(@incorrect_user).to_not be_valid  
+      end
+    end
   end
 end
