@@ -13,9 +13,6 @@ class PostsController < ApplicationController
     @comments = @post.post_comments
     @comment_replies = @post.post_comment_replies.includes(:user)
     @comment_reply = @post.post_comment_replies.build(user_id: current_user.id) if current_user
-    #@comment_reply = @post.post_comment_replies.includes(:user).recent
-    #@user = User.find_by(id: @post.user_id)
-    #@comments = @post.post_comments.order(created_at: :desc)
   end
 
   def new
