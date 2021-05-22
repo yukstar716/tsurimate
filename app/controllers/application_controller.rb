@@ -6,6 +6,16 @@ class ApplicationController < ActionController::Base
     render html: "hello, world!"
   end
 
+  def after_sign_in_path_for(resources)
+    if current_user
+      flash[:notice] = "ログインしました"
+      top_path
+    else
+      flash[:notice] = "新規登録が完了しました。早速質問を投稿してみましょう！"
+      top_path
+    end
+  end
+
   protected
 
   def configure_permitted_parameters
