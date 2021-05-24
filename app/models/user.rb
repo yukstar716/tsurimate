@@ -25,6 +25,7 @@ class User < ApplicationRecord
       user.provider = auth["provider"]
       user.uid = auth["uid"]
       user.username = auth["info"]["nickname"]
+      user.remote_user_image_url = auth["info"]["image"]
     end
   end
 
