@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   get 'about',  to: 'static_pages#about'
   get 'posts',  to: 'posts#new'
   get 'posts',  to: 'posts#show'
-  get 'users',  to: 'users#show'
+  #get 'users',  to: 'users#show'
   
   resources :posts do
     resources :post_comments,          only: [:new, :create, :destroy] do
