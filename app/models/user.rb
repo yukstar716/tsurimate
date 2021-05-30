@@ -18,14 +18,14 @@ class User < ApplicationRecord
   validates :password, presence: true,
                        length: { minimum: 6 }
 
-
-
   def self.from_omniauth(auth)
     find_or_create_by(provider: auth["provider"], uid: auth["uid"]) do |user|
       user.provider = auth["provider"]
       user.uid = auth["uid"]
-      user.username = auth["info"]["nickname"]
-      user.remote_user_image_url = auth["info"]["image"]
+      user.username = auth["info"]["nickname"] #usernameもしくはnickname
+      user.image = auth["info"]["image"]
+      user.password = Devise.friendly_token[0, 20] # パスワードを自動生成
+      user.email = User.dummy_email(auth) # ダミーのemailを生成
     end
   end
 
@@ -37,6 +37,12 @@ class User < ApplicationRecord
     else
       super
     end
+  end
+
+  private
+  
+  def self.dummy_email(auth)
+    "#{auth["uid"]}-#{auth["provider"]}@example.com"
   end
 
 end

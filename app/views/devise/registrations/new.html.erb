@@ -38,7 +38,11 @@
                 <%= f.submit "Sign up" %>
               </div>
 
-              <button class="btn btn-lg btn-google btn-block text-uppercase" type="submit"><i class="fab fa-google mr-2"></i> Sign up with Google</button>
+              <button class="btn btn-lg btn-twitter btn-block text-uppercase" type="submit">
+              <i class="fab fa-twitter mr-2"></i>
+                <%= link_to "Sign up with Twitter", 
+                  user_twitter_omniauth_authorize_path, method: :post %>
+              </button>
               
               <%= render "devise/shared/links" %>
             <% end %>

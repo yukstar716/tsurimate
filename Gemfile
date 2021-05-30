@@ -25,9 +25,10 @@ gem 'bcrypt', '~> 3.1.7'
 # Devise
 gem 'devise', git: 'https://github.com/heartcombo/devise'
 gem 'omniauth-twitter'
-
+#gem 'omniauth'
 # 
 gem 'dotenv-rails'
+gem 'omniauth-rails_csrf_protection'
 
 # Use Active Storage variant
 gem 'image_processing', '~> 1.2'
