@@ -23,9 +23,12 @@ class User < ApplicationRecord
       user.provider = auth["provider"]
       user.uid = auth["uid"]
       user.username = auth["info"]["nickname"] #usernameもしくはnickname
-      user.image = auth["info"]["image"]
       user.password = Devise.friendly_token[0, 20] # パスワードを自動生成
       user.email = User.dummy_email(auth) # ダミーのemailを生成
+      user.image = auth["info"]["image"]
+      uri = URI.parse(user.email)
+      avatar = uri.open
+      user.image.attach(io: avatar, filename: "user_avatar.jpg")
     end
   end
 
