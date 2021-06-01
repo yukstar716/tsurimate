@@ -35,6 +35,9 @@
  
   <% end %>
 <% end %>
+
+<details class="accordion-reply-form">
+  <summary>返信</summary>
   <div class="reply-form">
     <% if user_signed_in? %>
       <%= form_with(model: [@post, comment, PostCommentReply.new]) do |f| %>
@@ -47,5 +50,6 @@
         </div>
     <% end %>
   </div>
+</details>
 
 </div>

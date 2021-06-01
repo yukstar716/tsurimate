@@ -33,10 +33,7 @@
           <%= render partial: 'post_comment_replies/index', locals: { comment: c } %>
       </details>
     <% else %>
-      <details class="accordion-reply-form">
-        <summary>返信</summary>
-          <%= render partial: 'post_comment_replies/index', locals: { comment: c } %>
-      </details>
+      <%= render partial: 'post_comment_replies/index', locals: { comment: c } %>
     <% end %>
   <% end %>
 </div>
