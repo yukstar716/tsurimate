@@ -1,6 +1,13 @@
 require 'rails_helper'
 
 RSpec.describe "Posts", type: :request do
+
+  let(:user) { User.create(
+    username: "hoge",
+    email:    "hoge@g.com",
+    password: "hogehoge",
+  )}
+
   describe "#index" do
     it "responds success" do
       get "/top"
