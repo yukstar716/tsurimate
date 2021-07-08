@@ -64,6 +64,27 @@ RSpec.describe Post, type: :model do
       end      
     end
 
+    context "when the content is more than 300 characters" do
+      it "returns error" do
+        post_with_invalid_content = user.posts.build(
+          title: "title",
+          content: "a" * 301,
+        )
+        expect(post_with_invalid_content).to be_invalid  
+      end
+    end
+
+    context "when the content is less than 301" do
+      it "returns success" do
+        post_with_valid_content = user.posts.build(
+          title: "title",
+          content: "a" * 300
+        )
+        expect(post_with_valid_content).to be_valid  
+      end
+    end
+    
+
     context "when both title and content are filled" do
       it "is valid" do
         valid_post = user.posts.build(
@@ -93,8 +114,6 @@ RSpec.describe Post, type: :model do
         expect(post_without_title).to be_invalid 
       end    
     end
-    
-    
     
     context "when the title is empty" do
       it "is invalid" do
