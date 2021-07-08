@@ -26,4 +26,12 @@ RSpec.describe "Posts", type: :request do
       expect(response).to have_http_status(:success)
     end
   end
+
+  describe "#show" do
+    it "responds error" do
+      get "/posts/show"
+      expect(response).to_not be_success  
+    end
+  end
+  
 end
